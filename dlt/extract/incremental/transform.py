@@ -1,8 +1,6 @@
 from datetime import datetime, date  # noqa: I251
 from typing import Any, Optional, Tuple, List
 
-from dlt.common.libs.pyarrow import from_arrow_compute_output, to_arrow_compute_input
-
 try:
     import pandas as pd
 except ModuleNotFoundError:
@@ -31,6 +29,7 @@ from dlt.common.schema.typing import TColumnNames
 try:
     from dlt.common.libs import pyarrow
     from dlt.common.libs.pyarrow import pyarrow as pa, TAnyArrowItem
+    from dlt.common.libs.pyarrow import from_arrow_compute_output, to_arrow_compute_input
 except MissingDependencyException:
     pa = None
     pyarrow = None
